@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Return dashboard view
+Route::get('/', [UserController::class, 'index'])->name('dashboard');
+
+// Return student approval list
+Route::get('/students/approval', [StudentController::class, 'approval'])->name('student approval');
