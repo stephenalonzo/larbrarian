@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // Return dashboard view
+    // Return view depending on user role
     public function index()
     {
 
-        return view('index');
+        // $users = User::find(auth()->user()->id);
 
     }
-    
+
 }
