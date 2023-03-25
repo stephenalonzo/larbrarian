@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\LibrarianController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,10 @@ use App\Http\Controllers\UserController;
 */
 
 // Return dashboard view
-Route::get('/', [UserController::class, 'index'])->name('dashboard');
+Route::get('/', [LibrarianController::class, 'index'])->name('dashboard');
 
 // Return student approval list
 Route::get('/students/approval', [StudentController::class, 'approval'])->name('student approval');
+
+// Return student approved/registered list
+Route::get('/students/registered', [StudentController::class, 'registered'])->name('registered students');

@@ -1,7 +1,4 @@
 <x-layout>
-    <div class="p-2 flex flex-col items-start space-y-4 bg-gray-50 w-full">
-        <span class="font-semibold">Student Approval</span>
-    </div>
     <div class="bg-white w-full">
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

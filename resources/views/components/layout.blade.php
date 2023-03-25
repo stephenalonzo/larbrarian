@@ -16,7 +16,7 @@
         <header class="p-4 bg-white shadow-md">
             <nav class="flex flex-row items-center justify-between w-full">
                 <a href="#" class="font-semibold text-xl">
-                    {{ Str::ucfirst(Route::currentRouteName()) }}
+                    {{ ucwords(Route::currentRouteName()) }}
                 </a>
 
                 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
@@ -31,8 +31,7 @@
                     </div>
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                         </li>
                         <li>
                             <a href="#"
@@ -57,31 +56,52 @@
                     <div class="col-span-1">
                         <div class="bg-stone-900 rounded-sm w-full">
                             <a href="/" class="text-stone-400">
-                                <div class="p-4">Dashboard</div>
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-home"></i>
+                                    <span>Dashboard</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
                             <a href="/students/approval" class="text-stone-400">
-                                <div class="p-4">Student Approval</div>
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Student Approval</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
-                            <a href="./registered.html" class="text-stone-400">
-                                <div class="p-4">Registered Students</div>
+                            <a href="/students/registered" class="text-stone-400">
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>Registered Students</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
-                            <a href="" class="text-stone-400">
-                                <div class="p-4">Full Library</div>
+                            <a href="/books" class="text-stone-400">
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-book-open-cover"></i>
+                                    <span>Full Library</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
-                            <a href="#" class="text-stone-400">
-                                <div class="p-4">List Books</div>
+                            <a href="/books/create" class="text-stone-400">
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-list"></i>
+                                    <span>List Books</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
-                            <a href="./issue.html" class="text-stone-400">
-                                <div class="p-4">Issue/Return Books</div>
+                            <a href="/books/issue" class="text-stone-400">
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-book-arrow-right"></i>
+                                    <span>Issue/Return Books</span>
+                                </div>
                             </a>
                             <hr class="h-px bg-stone-400 border-0">
-                            <a href="./registered.html" class="text-stone-400">
-                                <div class="p-4">Currently Issued Books</div>
+                            <a href="/books/active" class="text-stone-400">
+                                <div class="p-4 flex flex-row items-center space-x-4">
+                                    <i class="fa-solid fa-clipboard"></i>
+                                    <span>Currently Issued Books</span>
+                                </div>
                             </a>
                         </div>
                     </div>
