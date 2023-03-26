@@ -15,7 +15,6 @@
     </div>
     <form action="" method="post" class="flex flex-row items-center space-x-4 w-full">
         <input type="text" name="search" placeholder="Enter book ID" class="border border-gray-200 rounded-sm w-full">
-        <button type="submit" class="px-4 py-2 rounded-sm bg-stone-900 text-stone-400">Search</button>
+        <button type="submit" class="px-4 py-2 rounded-sm bg-stone-900 text-stone-300">Search</button>
     </form>
-    
 </x-layout>

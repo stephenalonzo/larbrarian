@@ -16,7 +16,19 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        \App\Models\User::factory(2)->create();
+        \App\Models\User::factory(1)->create([
+            'first_name'    => 'Phil',
+            'last_name'     => 'Brooks',
+            'email'         => 'cmpunk@wwe.com',
+            'password'      => bcrypt('bestintheworld')
+        ]);
+
+        \App\Models\User::factory(1)->create([
+            'first_name'    => 'John',
+            'last_name'     => 'Cena',
+            'email'         => 'ucantseeme@wwe.com',
+            'password'      => bcrypt('ucantcme')
+        ]);
 
         $this->call([
             RoleSeeder::class,

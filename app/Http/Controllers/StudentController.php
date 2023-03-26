@@ -11,7 +11,7 @@ class StudentController extends Controller
     public function registered()
     {
 
-        return view('students.registered', [
+        return view('librarians.registered', [
             'students' => [
                 [
                     'id' => 1,
@@ -29,7 +29,7 @@ class StudentController extends Controller
     public function approval()
     {
 
-        return view('students.approval', [
+        return view('librarians.approval', [
             'students' => [
                 [
                     'id' => 2,
